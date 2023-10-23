@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "ypsL7ne",
+      "name": "Product A",
+      "price": 200,
+      "desc": "mo ta san pham A"
+    },
+    {
+      "id": "JnaYvG6",
+      "name": "Product B",
+      "price": 300,
+      "desc": "mo ta san pham B"
+    },
+    {
+      "id": "Nk-nIMQ",
+      "name": "Product C",
+      "price": 400,
+      "desc": "mo ta san pham C"
+    },
+    {
+      "name": "product E",
+      "desc": "mo ta san pham E",
+      "id": "hgbEnEA"
+    },
+    {
+      "name": "product hdsbsdojbsn",
+      "desc": "mo ta vsidbkldvsd",
+      "id": "e12Xenx"
+    }
+  ]
+}
