@@ -14,33 +14,6 @@
                         <label for="name">Name</label><br>
                         <input type="text" id="name" name="name" [(ngModel)]="name">
                     </div>
-                    <div>
-                        <label for="price">Price</label><br>
-                        <input type="text" id="price" name="price" [(ngModel)]="price">
-                    </div>
-                    <div>
-                        <label for="desc">Description</label><br>
-                        <textarea id="desc" name="desc" cols="30" rows="10"
-                            [(ngModel)]="desc"></textarea>
-                    </div>
-                    <div>
-                        <label for="">Author</label><br>
-                        <input type="text" name="author" [(ngModel)]="author">
-                    </div>
-                    <div>
-                        <label for="category">Choose a category</label>
-                        <br>
-                        <select name="category" [(ngModel)]="id_category" placeholder="Choose a category">
-
-                            <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}
-                            </option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="">Image</label><br>
-                        <input type="text" name="image" [(ngModel)]="image">
-                    </div>
-
                     <button (click)="update()"
                         class="w-full text-black bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Update</button>
 

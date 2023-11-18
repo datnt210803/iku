@@ -1,32 +1,46 @@
 {
   "products": [
     {
-      "id": "ypsL7ne",
-      "name": "Product A",
-      "price": 200,
-      "desc": "mo ta san pham A"
+      "name": "vwfdsvv",
+      "price": "423",
+      "desc": "yunbgrvfcs",
+      "author": "trtbfvd",
+      "id_category": "2ifnC-F",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Thein_bass_trumpet_in_C_with_4_rotary_valves.png/375px-Thein_bass_trumpet_in_C_with_4_rotary_valves.png",
+      "id": 2
     },
     {
-      "id": "JnaYvG6",
-      "name": "Product B",
-      "price": 300,
-      "desc": "mo ta san pham B"
+      "name": "nrsbdf sngs",
+      "price": "400",
+      "desc": "tnbfdvsdca",
+      "author": "trtbfvd",
+      "id_category": "2",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Thein_bass_trumpet_in_C_with_4_rotary_valves.png/375px-Thein_bass_trumpet_in_C_with_4_rotary_valves.png",
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": "2",
+      "name": "Product 3"
     },
     {
-      "id": "Nk-nIMQ",
-      "name": "Product C",
-      "price": 400,
-      "desc": "mo ta san pham C"
+      "name": "nrsbdf",
+      "id": "2ifnC-F"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "dut",
+      "email": "dut@gmail.com",
+      "password": "123456"
     },
     {
-      "name": "product E",
-      "desc": "mo ta san pham E",
-      "id": "hgbEnEA"
-    },
-    {
-      "name": "product hdsbsdojbsn",
-      "desc": "mo ta vsidbkldvsd",
-      "id": "e12Xenx"
+      "id": "2",
+      "name": "dut",
+      "email": "dut1@gmail.com",
+      "password": "123456"
     }
   ]
 }

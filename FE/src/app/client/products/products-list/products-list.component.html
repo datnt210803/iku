@@ -1,0 +1,52 @@
+<div class="container flex gap-5">
+  <div>
+    <h1 class="text-2xl font-bold mb-4">Product Filter</h1>
+
+    <div class="mb-4">
+      <label for="category" class="block text-sm font-medium text-gray-600">Filter by Category:</label>
+      <select [(ngModel)]="selectedCategory" id="category" class="mt-1 p-2 border rounded w-full">
+        <option value="All">All</option>
+        <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="maxPrice" class="block text-sm font-medium text-gray-600">Filter by Max Price:</label>
+      <input [(ngModel)]="maxPrice" type="number" id="maxPrice" class="mt-1 p-2 border rounded w-full"
+        placeholder="Enter max price">
+    </div>
+
+    <button (click)="applyFilters()" class="bg-blue-500 text-white p-2 rounded">Apply Filters</button>
+
+  </div>
+  <div>
+    <section
+      class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+
+      <div *ngFor="let product of filteredProducts"
+        class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <a routerLink="/products/{{product.id}}">
+          <img [src]="product.image" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+          <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs">{{product.author}}</span>
+            <p class="text-lg font-bold text-black truncate block capitalize">{{ product.name }}</p>
+            <div class="flex items-center">
+              <p class="text-lg font-semibold text-black cursor-auto my-3">{{ '$' + product.price }}</p>
+              <!-- <del>
+                <p class="text-sm text-gray-600 cursor-auto ml-2">{{ '$' + product.originalPrice }}</p>
+              </del> -->
+              <div class="ml-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-bag-plus" viewBox="0 0 16 16">
+
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+
+</div>
