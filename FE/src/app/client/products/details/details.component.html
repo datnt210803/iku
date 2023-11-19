@@ -11,11 +11,15 @@
                 <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
 
                 </div>
+                <div><span class="title-font font-medium text-2xl text-gray-900">{{price}} VNĐ</span></div>
                 <div class="flex">
-                    <span class="title-font font-medium text-2xl text-gray-900">{{price}} VNĐ</span>
+                    <div class="flex">
+                        <p class="pt-1">Quantity :</p>&nbsp;&nbsp;
+                        <input type="number" [(ngModel)]="quantity" class="border-1 border-black">
+                    </div>
                     <button
-                        class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Add
-                        to cart</button>
+                        class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
+                        (click)="addToCart()">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -59,7 +63,7 @@
                     <p class="inline-flex items-center mr-3 text-sm text-gray-900  font-semibold">
                         {{ getUserName(comment.id_user) }}
                     </p>
-                    
+
                     <div class="flex items-center">
                         <ng-container *ngFor="let star of [].constructor(comment.star); let i = index">
                             <svg class="w-4 h-4 {{ i < comment.star ? 'text-yellow-300' : 'text-gray-300 dark:text-gray-500' }} ms-1"

@@ -31,34 +31,11 @@
   ],
   "users": [
     {
-      "id": "1",
-      "name": "dut",
-      "email": "dut@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "2",
-      "name": "dut",
-      "email": "dut1@gmail.com",
-      "password": "123456"
-    },
-    {
-      "name": "minh mot lan",
-      "email": "minhmotlan.com",
+      "id": "0",
+      "name": "admin",
+      "email": "admin@example.com",
       "password": "123456",
-      "address": "",
-      "phoneNumber": 0,
-      "role": 2,
-      "id": "pIqcflc"
-    },
-    {
-      "name": "minh mot lan",
-      "email": "minhmotlan.com",
-      "password": "123456",
-      "address": "",
-      "phoneNumber": 0,
-      "role": 2,
-      "id": "B_jRngP"
+      "role": 1
     },
     {
       "name": "cuong cuong",
@@ -111,6 +88,99 @@
       "id_user": "E8YwcbA",
       "star": 4,
       "id": "YYQpTeh"
+    }
+  ],
+  "carts": [],
+  "bills": [
+    {
+      "items": [
+        {
+          "product": [
+            {
+              "name": "vwfdsvv",
+              "price": "423",
+              "desc": "yunbgrvfcs",
+              "author": "trtbfvd",
+              "id_category": "2ifnC-F",
+              "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Thein_bass_trumpet_in_C_with_4_rotary_valves.png/375px-Thein_bass_trumpet_in_C_with_4_rotary_valves.png",
+              "id": 2
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "product": [
+            {
+              "name": "nrsbdf sngs",
+              "price": "400",
+              "desc": "tnbfdvsdca",
+              "author": "trtbfvd",
+              "id_category": "2",
+              "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Thein_bass_trumpet_in_C_with_4_rotary_valves.png/375px-Thein_bass_trumpet_in_C_with_4_rotary_valves.png",
+              "id": 3
+            }
+          ],
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 1223,
+      "id_user": "E8YwcbA",
+      "status": 4,
+      "id": "FOOMMAR"
+    },
+    {
+      "items": [
+        {
+          "product": [
+            {
+              "name": "vwfdsvv",
+              "price": "423",
+              "desc": "yunbgrvfcs",
+              "author": "trtbfvd",
+              "id_category": "2ifnC-F",
+              "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Thein_bass_trumpet_in_C_with_4_rotary_valves.png/375px-Thein_bass_trumpet_in_C_with_4_rotary_valves.png",
+              "id": 2
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "product": [
+            {
+              "name": "nrsbdf sngs",
+              "price": "400",
+              "desc": "tnbfdvsdca",
+              "author": "trtbfvd",
+              "id_category": "2",
+              "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Thein_bass_trumpet_in_C_with_4_rotary_valves.png/375px-Thein_bass_trumpet_in_C_with_4_rotary_valves.png",
+              "id": 3
+            }
+          ],
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 1223,
+      "id_user": "E8YwcbA",
+      "status": 1,
+      "id": "-oN8dGO"
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "name": "Creating"
+    },
+    {
+      "id": 2,
+      "name": "Confirmed"
+    },
+    {
+      "id": 3,
+      "name": "Shipping"
+    },
+    {
+      "id": 4,
+      "name": "Shipped"
     }
   ]
 }

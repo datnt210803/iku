@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-
+  userId: string = ""
+  ngOnInit() {
+    this.userId = String(localStorage.getItem("role"))
+  }
 }

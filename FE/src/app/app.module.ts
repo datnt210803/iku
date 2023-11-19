@@ -23,11 +23,14 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsListComponent } from './client/products/products-list/products-list.component';
 import { ManagerComponent } from './client/users/manager/manager.component';
 import { UpdateAccountComponent } from './client/users/update-account/update-account.component';
+import { BillComponent } from './client/products/bill/bill.component';
+import { BillManageComponent } from './admin/bill-manage/bill-manage.component';
+import { RoleGuard } from './role.guard';
 
 @NgModule({
-  declarations: [AppComponent, UpdateComponent, NotFoundComponent, HomeComponent, DetailsComponent, CartsComponent, LoginComponent, SignupComponent, DashboardComponent, AddComponent, AddCategoryComponent, DashboardCategoryComponent, UpdateCategoryComponent,DashboardUserComponent, HeaderComponent, FooterComponent, ProductsListComponent, ManagerComponent, UpdateAccountComponent],
+  declarations: [AppComponent, UpdateComponent, NotFoundComponent, HomeComponent, DetailsComponent, CartsComponent, LoginComponent, SignupComponent, DashboardComponent, AddComponent, AddCategoryComponent, DashboardCategoryComponent, UpdateCategoryComponent,DashboardUserComponent, HeaderComponent, FooterComponent, ProductsListComponent, ManagerComponent, UpdateAccountComponent, BillComponent, BillManageComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [],
+  providers: [RoleGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -73,5 +73,6 @@ export class HeaderComponent implements OnInit {
   }
   logout() {
     this.roleService.setRole(null);
+    ()=>this.router.navigate(["/login"])
   }
 }

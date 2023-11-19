@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { IComment } from 'src/app/interface/comment';
 import { IProduct } from 'src/app/interface/product';
 import { IUser } from 'src/app/interface/user';
+import { CartService } from 'src/app/services/cart.service';
 import { CategoriesServiceService } from 'src/app/services/categories-service.service';
 import { CommentService } from 'src/app/services/comment.service';
 import { ProductsService } from 'src/app/services/products.service';
@@ -26,8 +27,9 @@ export class DetailsComponent {
   selectedStars: number = 1;
   content: string = ""
   comments: IComment[] = []
-  users:IUser[]=[]
-  constructor(private userService:UsersService,private productService: ProductsService, private router: Router, private route: ActivatedRoute, private categoryService: CategoriesServiceService, private commentService: CommentService) {
+  users: IUser[] = []
+  quantity: number = 1
+  constructor(private cartService: CartService, private userService: UsersService, private productService: ProductsService, private router: Router, private route: ActivatedRoute, private categoryService: CategoriesServiceService, private commentService: CommentService) {
 
   }
   ngOnInit() {
@@ -51,8 +53,32 @@ export class DetailsComponent {
       }
     )
   }
+  addToCart() {
+    console.log(this.product);
+    if (this.quantity <= 0) {
+      console.log("Value more than 1");
+    } else {
+      const newCart = {
+        product: this.product!,
+        quantity: this.quantity,
+        id_user: String(localStorage.getItem("id"))
+      }
 
-  getUsers(){
+      if (confirm(`Confirm to buy ${this.quantity} book(s)`)) {
+        this.cartService.addCart(newCart).subscribe(
+          () => {
+            alert('Product added to cart successfully!');
+          },
+          (error) => {
+            console.error('Error adding product to cart:', error);
+          }
+        )
+      }
+
+    }
+
+  }
+  getUsers() {
     this.userService.getUsers().subscribe(
       (data) => {
         this.users = data;

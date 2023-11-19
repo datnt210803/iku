@@ -1,14 +1,15 @@
 <header *ngIf="role === '2'">
   <!-- Content to display when role is not null -->
-  <div class="relative flex w-full items-center justify-between bg-white py-2 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:hover:text-red-700 dark:hover:cursor-pointer md:flex-wrap md:justify-start">
+  <div
+    class="relative flex w-full items-center justify-between bg-white py-2 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:hover:text-red-700 dark:hover:cursor-pointer md:flex-wrap md:justify-start">
     <div class="flex w-full flex-wrap items-center justify-between px-3">
       <div class="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto" id="navbarSupportedContentX"
         data-te-collapse-item>
         <a href="" class="text-neutral-600 hover:text-red-700 hover:underline">Home</a>
         <span class="text-neutral-600 px-4">|</span>
-        <a href="/products" class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">Products</a>
-        <span class="text-neutral-600 px-4">|</span>
-        <a href="#!" class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">About</a>
+        <a href="/products"
+          class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">Products</a>
+
       </div>
       <div class="flex-1 flex items-center justify-center">
         <div class="flex items-center space-x-4">
@@ -49,8 +50,7 @@
         <span class="text-neutral-600 px-4">|</span>
         <a href="/products"
           class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">Products</a>
-        <span class="text-neutral-600 px-4">|</span>
-        <a href="#!" class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">About</a>
+       
       </div>
       <div class="flex-1 flex items-center justify-center">
         <div class="flex items-center space-x-4">
@@ -74,8 +74,37 @@
   <ng-template #showProducts>
     <div class="flex flex-wrap">
       <div *ngFor="let product of productValues" class="pr-4 pb-4">
-        <a routerLink="/products/{{product.id}}" (click)="clearSearch()"  class="hover:underline">{{ product.name }}</a>
+        <a routerLink="/products/{{product.id}}" (click)="clearSearch()" class="hover:underline">{{ product.name }}</a>
       </div>
     </div>
   </ng-template>
 </div>
+<header *ngIf="role === '1'">
+  <!-- Content to display when role is not null -->
+  <div
+    class="relative flex w-full items-center justify-between bg-white py-2 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:hover:text-red-700 dark:hover:cursor-pointer md:flex-wrap md:justify-start">
+    <div class="flex w-full flex-wrap items-center justify-between px-3">
+      <div class="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto" id="navbarSupportedContentX"
+        data-te-collapse-item>
+        <a href="/admin/products" class="text-neutral-600 hover:text-red-700 hover:underline">Products</a>
+        <span class="text-neutral-600 px-4">|</span>
+        <a href="/admin/products/create"
+          class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">Create product</a>
+        <span class="text-neutral-600 px-4">|</span>
+        <a href="/admin/categories" class="text-neutral-600 hover:text-red-700 hover:underline">Categories</a>
+        <span class="text-neutral-600 px-4">|</span>
+        <a href="/admin/categories/create"
+          class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">Create category</a>
+        <span class="text-neutral-600 px-4">|</span>
+        <a href="/admin/users" class="text-neutral-600 hover:text-red-700 hover:underline">Users</a>
+        <span class="text-neutral-600 px-4">|</span>
+        <a href="/admin/bill"
+          class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">Bills</a>
+
+      </div>
+      <div class="flex items-center space-x-4">
+        <button (click)="logout()" class="text-neutral-600 hover:text-red-700 hover:underline">Logout</button>
+      </div>
+    </div>
+  </div>
+</header>

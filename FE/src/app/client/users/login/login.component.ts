@@ -1,3 +1,4 @@
+// Import các module cần thiết
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { IUser } from 'src/app/interface/user';
@@ -15,7 +16,7 @@ export class LoginComponent {
   email: string = "";
   error: string = "";
 
-  constructor(private router: Router,private roleService: RoleService, private userService: UsersService, private cdr: ChangeDetectorRef) {
+  constructor(private router: Router, private roleService: RoleService, private userService: UsersService, private cdr: ChangeDetectorRef) {
     this.userService.getUsers().subscribe(
       (data) => {
         this.users = data;
@@ -32,9 +33,15 @@ export class LoginComponent {
     const user = this.users.find(user => user.email === this.email);
     if (this.isEmailExists(this.email)) {
       if (this.password == user?.password) {
-        localStorage.setItem("id",user.id!)
+        localStorage.setItem("id", user.id!);
         this.roleService.setRole(String(user.role));
-        this.router.navigate(['/']);
+
+        // Chuyển hướng dựa trên role
+        if (user.role === 1) {
+          this.router.navigate(['/admin/products']);
+        } else {
+          this.router.navigate(['/']);
+        }
       } else {
         this.error = 'Password is not correct';
         console.log(this.error);

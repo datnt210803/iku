@@ -1,0 +1,35 @@
+<body>
+  <div class="bg-gray-100 pt-20">
+    <h1 class="mb-10 text-center text-2xl font-bold">Bill Items</h1>
+    <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+      <div class="rounded-lg md:w-2/3">
+        <ng-container *ngFor="let bill of billByUser; let i = index" class="bg-white">
+          <div *ngFor="let item of bill.items">
+            <div class="flex justify-between" *ngFor="let product of item.product">
+              <img [src]="product.image" alt="product-image" class="w-full rounded-lg sm:w-40" />
+              <div class="ml-4 flex flex-col">
+                <div class="mt-5">
+                  <h2 class="text-lg font-bold text-gray-900">{{product.name}}</h2>
+                  <p class="mt-1 text-xs text-gray-700">{{product.price}}</p>
+                  <div>
+                    Quantity: {{item.quantity}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex justify-between space-x-6">
+            <div class="flex">
+              <h2 class="text-red-500"> Total :</h2>
+              <h2>{{bill.totalAmount}} VND</h2>
+            </div>
+            <div class="flex">
+              <h2 class="text-red-500"> Status :</h2>
+              <h2>{{getStatusName(bill.status)}}</h2>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</body>
