@@ -1,4 +1,4 @@
-// app-routing.module.ts
+
 import { RouterModule, Routes } from '@angular/router';
 import { RoleGuard } from './role.guard';
 import { HomeComponent } from './client/products/home/home.component';
@@ -40,7 +40,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    canActivate: [RoleGuard], // Sử dụng Guard ở đây
+    canActivate: [RoleGuard], 
     children: [
       { path: 'products', component: DashboardComponent },
       { path: 'products/create', component: AddComponent },

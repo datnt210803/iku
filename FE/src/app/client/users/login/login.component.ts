@@ -1,4 +1,4 @@
-// Import các module cần thiết
+
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { IUser } from 'src/app/interface/user';
@@ -36,7 +36,7 @@ export class LoginComponent {
         localStorage.setItem("id", user.id!);
         this.roleService.setRole(String(user.role));
 
-        // Chuyển hướng dựa trên role
+        
         if (user.role === 1) {
           this.router.navigate(['/admin/products']);
         } else {

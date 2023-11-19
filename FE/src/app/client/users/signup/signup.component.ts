@@ -50,7 +50,6 @@ export class SignupComponent {
           console.log(this.error);
 
         } else {
-          // Gán giá trị mới nếu thỏa mãn các điều kiện
           const newUser: IUser = {
             name: this.name!,
             email: this.email!,

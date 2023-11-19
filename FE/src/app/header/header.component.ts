@@ -34,7 +34,6 @@ export class HeaderComponent implements OnInit {
     this.loadCategories();
     this.currentUrl = this.router.url;
 
-    // Subscribe để lắng nghe sự thay đổi URL
     this.route.url.subscribe((segments) => {
       this.currentUrl = segments.join('/');
     });

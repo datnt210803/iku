@@ -61,7 +61,7 @@ export class CartsComponent {
   }
 
   createBill() {
-    // Tạo dữ liệu hóa đơn từ giỏ hàng
+    
     const billData = {
       items: this.carts.map((cart) => {
         return {
@@ -75,7 +75,7 @@ export class CartsComponent {
       status:1
     };
 
-    // Gửi dữ liệu hóa đơn đến http://localhost:3000/bills
+    
     this.http.post('http://localhost:3000/bills', billData).subscribe(
       (data) => {
         console.log('Bill created:', data);

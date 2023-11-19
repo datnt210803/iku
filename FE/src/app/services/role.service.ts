@@ -11,7 +11,7 @@ export class RoleService {
   constructor() {}
 
   setRole(role: string | null): void {
-    localStorage.setItem('role', role || ''); // Ensure role is a string or null
+    localStorage.setItem('role', role || '');
     this.roleSubject.next(role);
   }
 }

@@ -38,10 +38,10 @@ export class BillComponent {
       }
     )
   }
-  // Add this method to your BillComponent class
+ 
   getStatusName(statusId: number): string {
     const status = this.statusList.find(status => status.id === statusId);
-    return status ? status.name : 'Unknown'; // You can handle the case where the status is not found
+    return status ? status.name : 'Unknown'; 
   }
 
 }

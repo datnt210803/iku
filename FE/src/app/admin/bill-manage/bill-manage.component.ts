@@ -39,7 +39,7 @@ export class BillManageComponent {
     return bill.items.reduce((total, item) => total + item.quantity, 0);
   }
   updateBillStatus(bill: IBill): void {
-    // Ép kiểu giá trị trường status thành số
+    
     bill.status = Number(bill.status);
 
     this.billService.updateBill(bill.id, bill).subscribe(
@@ -48,7 +48,7 @@ export class BillManageComponent {
       },
       (error) => {
         console.error('Error updating bill status:', error);
-        // Xử lý lỗi theo cách phù hợp
+        
       }
     );
   }

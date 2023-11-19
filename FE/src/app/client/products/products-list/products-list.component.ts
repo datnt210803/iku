@@ -21,7 +21,7 @@ export class ProductsListComponent implements OnInit {
     this.productService.getProduct().subscribe(
       (data) => {
         this.products = data;
-        this.applyFilters(); // Gọi hàm applyFilters khi có dữ liệu sản phẩm
+        this.applyFilters(); 
         console.log(data);
       }
     );
