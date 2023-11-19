@@ -11,10 +11,13 @@ export class UsersService {
   getUsers(): Observable<IUser[]> {
     return this.http.get<IUser[]>(`${this.API}`)
   }
+  getUserById(id:string): Observable<IUser> {
+    return this.http.get<IUser>(`${this.API}/${id}`)
+  }
   register(data:IUser):Observable<IUser>{
     return this.http.post<IUser>(`${this.API}`,data)
   }
-  updateProduct(id:string,data:IUser):Observable<IUser>{
+  updateUser(id:string,data:IUser):Observable<IUser>{
     return this.http.put<IUser>(`${this.API}/${id}`,data)
   }
 }

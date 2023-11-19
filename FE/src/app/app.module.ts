@@ -21,8 +21,11 @@ import { DashboardUserComponent } from './admin/users/dashboard/dashboard.compon
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsListComponent } from './client/products/products-list/products-list.component';
+import { ManagerComponent } from './client/users/manager/manager.component';
+import { UpdateAccountComponent } from './client/users/update-account/update-account.component';
+
 @NgModule({
-  declarations: [AppComponent, UpdateComponent, NotFoundComponent, HomeComponent, DetailsComponent, CartsComponent, LoginComponent, SignupComponent, DashboardComponent, AddComponent, AddCategoryComponent, DashboardCategoryComponent, UpdateCategoryComponent,DashboardUserComponent, HeaderComponent, FooterComponent, ProductsListComponent],
+  declarations: [AppComponent, UpdateComponent, NotFoundComponent, HomeComponent, DetailsComponent, CartsComponent, LoginComponent, SignupComponent, DashboardComponent, AddComponent, AddCategoryComponent, DashboardCategoryComponent, UpdateCategoryComponent,DashboardUserComponent, HeaderComponent, FooterComponent, ProductsListComponent, ManagerComponent, UpdateAccountComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

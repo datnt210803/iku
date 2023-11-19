@@ -41,6 +41,76 @@
       "name": "dut",
       "email": "dut1@gmail.com",
       "password": "123456"
+    },
+    {
+      "name": "minh mot lan",
+      "email": "minhmotlan.com",
+      "password": "123456",
+      "address": "",
+      "phoneNumber": 0,
+      "role": 2,
+      "id": "pIqcflc"
+    },
+    {
+      "name": "minh mot lan",
+      "email": "minhmotlan.com",
+      "password": "123456",
+      "address": "",
+      "phoneNumber": 0,
+      "role": 2,
+      "id": "B_jRngP"
+    },
+    {
+      "name": "cuong cuong",
+      "email": "abcd@gmail.com",
+      "password": "123456",
+      "address": "",
+      "phoneNumber": 0,
+      "role": 2,
+      "id": "QfY9baa"
+    },
+    {
+      "name": "grefwdas",
+      "email": "dut12@gmail.com",
+      "password": "123456",
+      "address": "",
+      "phoneNumber": 0,
+      "role": 2,
+      "id": "gAlrkxH"
+    },
+    {
+      "name": "Dat",
+      "email": "datnthhc210803@gmail.com",
+      "password": "123456",
+      "address": "HN",
+      "phoneNumber": 379965265,
+      "role": 2,
+      "id": "E8YwcbA"
+    },
+    {
+      "name": "product E",
+      "email": "dut123@gmail.com",
+      "password": "123456",
+      "address": "",
+      "phoneNumber": 0,
+      "role": 2,
+      "id": "eGI3AGK"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "content": "good",
+      "id_product": "2",
+      "id_user": "B_jRngP",
+      "star": 0
+    },
+    {
+      "content": "67n5bt4rvwc",
+      "id_product": "2",
+      "id_user": "E8YwcbA",
+      "star": 4,
+      "id": "YYQpTeh"
     }
   ]
 }

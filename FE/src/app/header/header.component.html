@@ -1,16 +1,39 @@
-<header>
-  <!-- Navigation bar -->
-  <nav
-    class="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
-    data-te-navbar-ref>
+<header *ngIf="role === '2'">
+  <!-- Content to display when role is not null -->
+  <div class="relative flex w-full items-center justify-between bg-white py-2 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:hover:text-red-700 dark:hover:cursor-pointer md:flex-wrap md:justify-start">
+    <div class="flex w-full flex-wrap items-center justify-between px-3">
+      <div class="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto" id="navbarSupportedContentX"
+        data-te-collapse-item>
+        <a href="" class="text-neutral-600 hover:text-red-700 hover:underline">Home</a>
+        <span class="text-neutral-600 px-4">|</span>
+        <a href="/products" class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">Products</a>
+        <span class="text-neutral-600 px-4">|</span>
+        <a href="#!" class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">About</a>
+      </div>
+      <div class="flex-1 flex items-center justify-center">
+        <div class="flex items-center space-x-4">
+          <input type="text" class="border-3" [(ngModel)]="searchValue">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            (click)="search()">Search</button>
+        </div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a routerLink="/account" class="hover:underline">Account manager</a>
+        <button (click)="logout()" class="text-neutral-600 hover:text-red-700 hover:underline">Logout</button>
+      </div>
+    </div>
+  </div>
+</header>
+<header *ngIf="role === null || role===''">
+  <!-- Content to display when role is null -->
+  <div
+    class="relative flex w-full items-center justify-between bg-white py-2 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:hover:text-red-700 dark:hover:cursor-pointer md:flex-wrap md:justify-start">
     <div class="flex w-full flex-wrap items-center justify-between px-3">
       <div class="flex items-center">
-        <!-- Hamburger menu button -->
         <button
           class="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:hidden"
           type="button" data-te-collapse-init data-te-target="#navbarSupportedContentX"
           aria-controls="navbarSupportedContentX" aria-expanded="false" aria-label="Toggle navigation">
-          <!-- Hamburger menu icon -->
           <span class="[&>svg]:w-5">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="h-7 w-7">
@@ -20,24 +43,39 @@
         </button>
       </div>
 
-
       <div class="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto" id="navbarSupportedContentX"
         data-te-collapse-item>
         <a href="" class="text-neutral-600 hover:text-red-700 hover:underline">Home</a>
         <span class="text-neutral-600 px-4">|</span>
-        <a href="/products" class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">Products</a>
+        <a href="/products"
+          class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">Products</a>
         <span class="text-neutral-600 px-4">|</span>
         <a href="#!" class="text-neutral-600 hover:text-red-700 hover:text-neutral-700 hover:underline">About</a>
       </div>
-
+      <div class="flex-1 flex items-center justify-center">
+        <div class="flex items-center space-x-4">
+          <input type="text" class="border-3" [(ngModel)]="searchValue">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            (click)="search()">Search</button>
+        </div>
+      </div>
       <div class="flex items-center space-x-4">
-        <a href="#!" class="text-neutral-600 hover:text-red-700 hover:underline">Log in</a>
+        <a href="/login" class="text-neutral-600 hover:text-red-700 hover:underline">Log in</a>
         <span class="text-neutral-600">|</span>
-        <a href="#!" class="text-neutral-600 hover:text-red-700 hover:underline">Register</a>
+        <a href="/register" class="text-neutral-600 hover:text-red-700 hover:underline">Register</a>
       </div>
     </div>
-  </nav>
-
-  <!-- Hero section with background image, heading, subheading and button -->
-  
+  </div>
 </header>
+<div class="flex-1" style="position: relative; z-index: 10;">
+  <div *ngIf="showNoDataMessage && productValues.length === 0; else showProducts">
+    No data
+  </div>
+  <ng-template #showProducts>
+    <div class="flex flex-wrap">
+      <div *ngFor="let product of productValues" class="pr-4 pb-4">
+        <a routerLink="/products/{{product.id}}" (click)="clearSearch()"  class="hover:underline">{{ product.name }}</a>
+      </div>
+    </div>
+  </ng-template>
+</div>

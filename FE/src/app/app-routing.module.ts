@@ -12,6 +12,10 @@ import { DashboardUserComponent } from './admin/users/dashboard/dashboard.compon
 import { HomeComponent } from './client/products/home/home.component';
 import { ProductsListComponent } from './client/products/products-list/products-list.component';
 import { DetailsComponent } from './client/products/details/details.component';
+import { SignupComponent } from './client/users/signup/signup.component';
+import { LoginComponent } from './client/users/login/login.component';
+import { ManagerComponent } from './client/users/manager/manager.component';
+import { UpdateAccountComponent } from './client/users/update-account/update-account.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "", pathMatch: "full" },
@@ -21,6 +25,10 @@ const routes: Routes = [
       { path: "", component: HomeComponent },
       { path: "products", component: ProductsListComponent },
       { path: "products/:id", component: DetailsComponent },
+      { path: "register", component: SignupComponent },
+      { path: "login", component: LoginComponent },
+      { path: "account", component: ManagerComponent },
+      { path: "account/update", component: UpdateAccountComponent },
       
     ],
   },

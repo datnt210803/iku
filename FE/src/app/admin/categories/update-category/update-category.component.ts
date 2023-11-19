@@ -23,13 +23,13 @@ export class UpdateCategoryComponent {
         this.categoryService.getCategoryById(this.id!).subscribe(
           (data) => {
             this.category = data;
-            this.name=data.name
+            this.name = data.name
           }
         )
       }
     )
   }
-  
+
   update() {
     const newCategory: ICategory = {
       name: this.name!,
